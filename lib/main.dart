@@ -3,10 +3,10 @@ import 'package:first_app/body/container_background.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: MyBodyClass(
-            Color.fromARGB(255, 111, 28, 255), Color.fromARGB(255, 39, 0, 90)),
+        body: MyBodyClass(const Color.fromARGB(255, 74, 0, 201),
+            const Color.fromARGB(255, 27, 0, 63)),
       ),
     ),
   );
