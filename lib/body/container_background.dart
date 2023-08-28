@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:first_app/body/style_text.dart';
 
 class MyBodyClass extends StatelessWidget {
-  const MyBodyClass({super.key});
+  final Color color1;
+  final Color color2;
+  const MyBodyClass(this.color1, this.color2, {super.key});
+
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 127, 67, 230),
-            Color.fromARGB(255, 69, 10, 172),
-          ],
+          colors: [color1, color2],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
       ),
       child: const Center(
-        child: MyTextStyle(),
+        child: MyTextStyle('Hello Aamir'),
       ),
     );
   }
