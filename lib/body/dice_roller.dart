@@ -15,7 +15,7 @@ class DiceRoller extends StatefulWidget {
 class _ProvateDiceRoller extends State<DiceRoller> {
   var currentDice = 2;
 
-  void rollDice() {
+  void onRoll() {
     setState(() {
       currentDice = randomnum.nextInt(6) + 1;
     });
@@ -29,7 +29,7 @@ class _ProvateDiceRoller extends State<DiceRoller> {
         Image.asset('assets/images/dice-$currentDice.png', width: 150),
         const SizedBox(height: 150),
         TextButton(
-          onPressed: rollDice,
+          onPressed: onRoll,
           style: TextButton.styleFrom(
             // padding: const EdgeInsets.only(top: 170),
             foregroundColor: Colors.white,
